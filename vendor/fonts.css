@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Gilroy';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/gilroy-medium.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: 'RFKrabuler';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/RFKrabuler.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Pribambas';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/Pribambas.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/roboto-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/inter-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Hind';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/Hind-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Yanone';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/YanoneKaffeesatz-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Gotham Medium';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/GothamPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Gotham';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/GothamPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Gotham Narrow';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/GothamProNarrow-Medium.woff") format("woff");
+}

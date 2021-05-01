@@ -4,7 +4,7 @@ import NewsApi from './NewsApi';
 import SearchNews from './SearchNews';
 
 const header = document.querySelector('.header');
-const API_NEWS = NODE_ENV === 'production' ? 'https://nomoreparties.co/news/v2/' : 'https://newsapi.org/v2/';
+const API_NEWS = NODE_ENV === 'production' ? 'https://nomoreparties.co/news/v2/' : 'http://nomoreparties.co/news/v2/';
 const newsApi = new NewsApi(API_NEWS);
 const searchNews = new SearchNews(newsApi);
 const newsSubmit = document.querySelector('.news__submit');

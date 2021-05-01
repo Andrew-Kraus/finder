@@ -46,7 +46,7 @@ export default class SearchNews {
           `
           <a class="results__card" href="${data.articles[i].url}">
                 <div class="inner">
-                  <img class="results__image" src='${data.articles[i].urlToImage}' onerror="this.onerror=null; this.src="<%=require('../images/work_space_1.jpg')%>">
+                  <img class="results__image" src='${data.articles[i].urlToImage}' onerror="this.onerror=null; this.src="<%=require('../images/work_space_1.jpg')%>
                 </div>
                     <p class="results__date">${setDate(data.articles[i].publishedAt)}</p>
                     <h2 class="results__title">${data.articles[i].title}</h2>
@@ -72,7 +72,7 @@ export default class SearchNews {
               `
               <a class="results__card" href="${article.url}">
                     <div class="inner">
-                      <img class="results__image" src='${article.urlToImage}' onerror="this.onerror=null; this.src="<%=require('../images/work_space_1.jpg')%>">
+                      <img class="results__image" src='${article.urlToImage}' onerror="this.onerror=null; this.src="<%=require('../images/work_space_1.jpg')%>
                     </div>
                         <p class="results__date">${article.publishedAt}</p>
                         <h2 class="results__title">${article.title}</h2>

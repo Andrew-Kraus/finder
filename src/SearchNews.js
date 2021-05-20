@@ -51,7 +51,7 @@ export default class SearchNews {
           `
           <a class="results__card" href="${data.articles[i].url}">
                 <div class="inner">
-                <img class="results__image" src='${data.articles[i].urlToImage}' onError="this.onerror=null;this.src='../images/work_space_1.jpg';" />
+                <img class="results__image" src='${data.articles[i].urlToImage}' onError="this.onerror=null;this.src='https://i.pinimg.com/originals/d7/47/39/d7473958034f1bc7669e8664056924e4.jpg';" />
                 </div>
                     <p class="results__date">${setDate(data.articles[i].publishedAt)}</p>
                     <h2 class="results__title">${data.articles[i].title}</h2>
@@ -77,7 +77,7 @@ export default class SearchNews {
               `
               <a class="results__card" href="${article.url}">
                     <div class="inner">
-                    <img class="results__image" src='${article.urlToImage}' onError="this.onerror=null;this.src='../images/work_space_1.jpg';" />
+                    <img class="results__image" src='${article.urlToImage}' onError="this.onerror=null;this.src='https://i.pinimg.com/originals/d7/47/39/d7473958034f1bc7669e8664056924e4.jpg';" />
                     </div>
                         <p class="results__date">${article.publishedAt}</p>
                         <h2 class="results__title">${article.title}</h2>

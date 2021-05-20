@@ -26,6 +26,11 @@ export function setDate(data) {
 }
 let articlesOfPage = 9;
 
+function imgError(image) {
+  image.onerror = "";
+  image.src = "../images/work_space_1.jpg";
+  return true;
+}
 
 export default class SearchNews {
   constructor(newsApi) {
@@ -46,7 +51,7 @@ export default class SearchNews {
           `
           <a class="results__card" href="${data.articles[i].url}">
                 <div class="inner">
-                  <img class="results__image" src='${data.articles[i].urlToImage}' onerror="this.onerror=null; this.src="<%=require('../images/work_space_1.jpg')%>
+                <img class="results__image" src='${data.articles[i].urlToImage}' onError="this.onerror=null;this.src='../images/work_space_1.jpg';" />
                 </div>
                     <p class="results__date">${setDate(data.articles[i].publishedAt)}</p>
                     <h2 class="results__title">${data.articles[i].title}</h2>
@@ -72,7 +77,7 @@ export default class SearchNews {
               `
               <a class="results__card" href="${article.url}">
                     <div class="inner">
-                      <img class="results__image" src='${article.urlToImage}' onerror="this.onerror=null; this.src="<%=require('../images/work_space_1.jpg')%>
+                    <img class="results__image" src='${article.urlToImage}' onError="this.onerror=null;this.src='../images/work_space_1.jpg';" />
                     </div>
                         <p class="results__date">${article.publishedAt}</p>
                         <h2 class="results__title">${article.title}</h2>
@@ -115,5 +120,6 @@ export default class SearchNews {
       ? this.resultsNotFound.style.display = 'flex'
       : this.resultsNotFound.style.display = 'none';
   }
+
 
 }

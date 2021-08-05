@@ -1,36 +1,12 @@
-const newsInput = document.querySelector('.news__input');
-const cardsArray = [];
-const results = document.querySelector('.results');
-const resultsGrid = document.querySelector('.results__grid');
-const pagination = document.querySelector('.results__pagination')
-const resultsCard = document.querySelector('.results__card');
-const paginationLi = document.querySelectorAll('.results__pagination-li');
-export const monthSplit = 'января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабря'.split(',');
-export const msDay = 86400000;
-
-export function getDate() {
-  const todayDate = new Date();
-  const dateInMs = 6 * msDay;
-  const lastDate = new Date(todayDate.getTime() - dateInMs);
-  const dateFrom = lastDate.toISOString().slice(0, 10);
-  const dateTo = todayDate.toISOString().slice(0, 10);
-
-  return { dateFrom, dateTo };
+import {
+  setDate,
+  newsInput,
+  resultsGrid,
+  pagination,
+  articlesOfPage,
 }
+from './const/const';
 
-export function setDate(data) {
-  const date = new Date(data);
-  const month = monthSplit[date.getMonth()];
-
-  return `${date.getDate()} ${month}, ${date.getFullYear()}`;
-}
-let articlesOfPage = 9;
-
-function imgError(image) {
-  image.onerror = "";
-  image.src = "../images/work_space_1.jpg";
-  return true;
-}
 
 export default class SearchNews {
   constructor(newsApi) {
@@ -38,7 +14,8 @@ export default class SearchNews {
   }
 
   getNews = () => {
-    resultsGrid.innerHTML = '';
+    this.deleteItems(resultsGrid);
+    this.deleteItems(pagination);
     this.notFound(false);
     this.preloader(true);
     this.newsApi.getNewsApi(newsInput.value)
@@ -63,23 +40,37 @@ export default class SearchNews {
                 </div>
           `
         )}
+
+        let countOfItems = Math.ceil(data.articles.length / articlesOfPage );
+        let paginationLi = [];
+
+        for (let i = 1; i <= countOfItems; i++) {
+          let pagButton = document.createElement('li');
+            pagButton.classList.add('results__pagination-number');
+            pagButton.innerHTML = i;
+            pagination.appendChild(pagButton);
+            paginationLi.push(pagButton);
+        }
+        paginationLi[0].classList.add('active');
+        pagination.style.display = 'flex';
+
         for (let li of paginationLi) {
-          li.addEventListener('click', function() {
+          li.addEventListener('click', () => {
             let pageNum = li.textContent;
             let start = (pageNum - 1) * articlesOfPage;
             let end = start + articlesOfPage;
             let articlesList = data.articles.slice(start, end);
-            console.log(articlesList);
+            paginationLi.forEach((lastButton) => lastButton.classList.remove('active'));
+            li.classList.add('active');
             resultsGrid.innerHTML = '';
             for (let article of articlesList) {
-              console.log(article);
               resultsGrid.insertAdjacentHTML('beforeend',
               `
               <a class="results__card" href="${article.url}">
                     <div class="inner">
                     <img class="results__image" src='${article.urlToImage}' onError="this.onerror=null; this.src='https://www.cellularlineservices.com/wp-content/uploads/revslider/fullscreen-menu/work_space_1.jpg';" />
                     </div>
-                        <p class="results__date">${article.publishedAt}</p>
+                        <p class="results__date">${setDate(article.publishedAt)}</p>
                         <h2 class="results__title">${article.title}</h2>
                         <p class="results__text">${article.description}</p>
                         <div class="results__bottom">
@@ -91,9 +82,6 @@ export default class SearchNews {
               )}
           })
         }
-
-      pagination.style.display = 'flex';
-
 
     })
     .catch((err) => {
@@ -121,5 +109,7 @@ export default class SearchNews {
       : this.resultsNotFound.style.display = 'none';
   }
 
-
+  deleteItems = (item) => {
+    item.innerHTML = '';
+  }
 }

@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Finder</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
   <div class="page">
@@ -13,41 +15,27 @@
     <a href="#" class="header__logo">Finder</a>
     <nav>
       <ul>
-        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Главная</a></li>
         <li><a href="news.html">Новости</a></li>
         <li><a href="music.html">Музыка</a></li>
-        <li><a href="weather.html">Погода</a></li>
+        <li><a href="#">Погода</a></li>
         <li><a href="#">Контакты</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="news">
-    <div class="news__container">
-      <h2 class="news__title">Искать</h2>
-      <form class="form">
-        <input type="text" name="search-news" class="news__input" placeholder="Введите интересующую вас тему" required>
-        <input type="submit" name="" class="news__submit" value="Искать" required>
-      </form>
+  <section class="swiper-container">
+
+    <div class="swiper-wrapper">
+
+
     </div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
   </section>
 
-  <section class="results">
-
-    <i class="preloader"></i>
-    <div class="results__not-found-container">
-      <img src="../images/not-found.png" class="results__not-found">
-      <h2 class="results__not-found-text">К сожалению по вашему запросу ничего не найдено</h2>
-    </div>
-
-    <div class="results__grid">
 
 
-    </div>
-    <ul class="results__pagination">
-
-    </ul>
-  </section>
 
   <footer class="footer">
     <div class="footer__container">
@@ -68,5 +56,7 @@
 
   </div>
   <script src="https://kit.fontawesome.com/c6829fadb3.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>

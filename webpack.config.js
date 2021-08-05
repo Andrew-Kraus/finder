@@ -10,6 +10,8 @@ module.exports = {
 entry: {
   index: './src/index.js',
   news: './src/news.js',
+  music: './src/music.js',
+  weather: './src/weather.js',
 },
 output: {
     filename: '[name].[chunkhash].js',
@@ -84,6 +86,22 @@ plugins: [
       chunks: ["news"],
       favicon: './images/icon.ico'
   }),
+
+    new HtmlWebpackPlugin({
+      template: 'src/music.html',
+      filename: 'music.html',
+      inject: true,
+      chunks: ["music"],
+      favicon: './images/icon.ico'
+}),
+
+    new HtmlWebpackPlugin({
+      template: 'src/weather.html',
+      filename: 'weather.html',
+      inject: true,
+      chunks: ["weather"],
+      favicon: './images/icon.ico'
+}),
 
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

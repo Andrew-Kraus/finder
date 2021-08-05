@@ -8,7 +8,6 @@ const API_NEWS = NODE_ENV === 'production' ? 'https://nomoreparties.co/news/v2/'
 const newsApi = new NewsApi(API_NEWS);
 const searchNews = new SearchNews(newsApi);
 const newsSubmit = document.querySelector('.news__submit');
-const paginationButton = document.querySelectorAll('.results__pagination-number');
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('sticky', window.scrollY > 0);
@@ -17,11 +16,4 @@ window.addEventListener('scroll', () => {
 newsSubmit.addEventListener('click', (e) => {
   e.preventDefault();
   searchNews.getNews();
-});
-
-paginationButton.forEach((element) => {
-  element.addEventListener('click', () => {
-    paginationButton.forEach((lastButton) => lastButton.classList.remove('active'));
-    element.classList.add('active');
-  });
 });

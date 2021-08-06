@@ -12,7 +12,7 @@ export default class GetWeather {
       <div class="swiper-slide weather__card">
     <h3 class="weather__card-title">${this.cityNameTranslation(city)}</h3>
     <h4 class="weather__card-status">${this.weatherStatusName(data.weather[0].main)}</h4>
-    <img class="weather__card-icon" src='${this.weatherStatus(data.weather[0].main)}'>
+    <img class="weather__card-icon" src='${this.weatherStatus(data.weather[0].main)}'></img>
     <h2 class="weather__card-deg">${this.kToC(data.main.temp)}<sup>&deg;</sup></h2>
     <div class="weather__card-details">
       <div class="weather__card-min">

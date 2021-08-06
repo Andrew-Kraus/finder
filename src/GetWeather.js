@@ -12,7 +12,7 @@ export default class GetWeather {
       <div class="swiper-slide weather__card">
     <h3 class="weather__card-title">${this.cityNameTranslation(city)}</h3>
     <h4 class="weather__card-status">${this.weatherStatusName(data.weather[0].main)}</h4>
-    <img class="weather__card-icon" src='${this.weatherStatus(data.weather[0].main)}'></img>
+    <img class="weather__card-icon" src='${this.weatherStatus(data.weather[0].main)}'>
     <h2 class="weather__card-deg">${this.kToC(data.main.temp)}<sup>&deg;</sup></h2>
     <div class="weather__card-details">
       <div class="weather__card-min">
@@ -36,11 +36,11 @@ export default class GetWeather {
 
     weatherStatus = (status) => {
       if (status === 'Clear') {
-        return '../images/clear.png';
+        return 'https://www.pinclipart.com/picdir/big/44-442469_cctv-camera-clipart.png';
       } else if (status === 'Clouds') {
-        return '../images/clouds.png';
+        return 'https://cdn.pixabay.com/photo/2020/03/06/02/02/cloud-4905880_1280.png';
       } else if (status === 'Rain') {
-        return '../images/rain.png';
+        return 'https://image.flaticon.com/icons/svg/1146/1146858.svg';
       }
     }
 

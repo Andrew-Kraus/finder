@@ -52,7 +52,7 @@ export default class SearchNews {
             paginationLi.push(pagButton);
         }
         paginationLi[0].classList.add('active');
-        pagination.style.display = 'flex';
+        pagination.style.display = 'grid';
 
         for (let li of paginationLi) {
           li.addEventListener('click', () => {
@@ -60,10 +60,6 @@ export default class SearchNews {
             let pageNum = li.textContent;
             let start = (pageNum - 1) * articlesOfPage;
             let end = start + articlesOfPage;
-
-
-
-
 
             let articlesList = data.articles.slice(start, end);
 

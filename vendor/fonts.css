@@ -1,4 +1,11 @@
 @font-face {
+  font-family: 'Gotham';
+  font-style:  normal;
+  font-weight: normal;
+  src: url("./fonts/GothamPro-Medium.woff") format("woff");
+}
+
+@font-face {
   font-family: 'Gilroy';
   font-style:  normal;
   font-weight: normal;
@@ -53,13 +60,6 @@
   font-style:  normal;
   font-weight: normal;
   src: url("./fonts/GothamPro-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: 'Gotham';
-  font-style:  normal;
-  font-weight: normal;
-  src: url("./fonts/GothamPro-Light.woff") format("woff");
 }
 
 @font-face {

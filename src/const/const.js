@@ -28,3 +28,6 @@ export const paginationLi = document.querySelectorAll('.results__pagination-li')
 export const paginationButton = document.querySelectorAll('.results__pagination-number');
 export const articlesOfPage = 9;
 export const weather = document.querySelector('.swiper-wrapper');
+export const menuMobile = document.querySelector('.header__nav-mobile');
+export const menuMobileIcon = document.querySelector('.header__nav-icon-mobile');
+export const menuMobileCloseIcon = document.querySelector('.header__nav-mobile-close');

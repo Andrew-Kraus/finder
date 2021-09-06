@@ -3,7 +3,12 @@ import '../vendor/normalize.css';
 import Swiper from 'swiper';
 import WeatherApi from './WeatherApi';
 import GetWeather from './GetWeather';
-import { weather } from './const/const';
+import {
+  weather,
+  menuMobile,
+  menuMobileIcon,
+  menuMobileCloseIcon,
+} from './const/const';
 
 const header = document.querySelector('.header');
 const API_WEATHER = NODE_ENV === 'production' ? 'https://api.openweathermap.org/' : 'https://api.openweathermap.org/';
@@ -40,3 +45,12 @@ function renderSwiper() {
 
 
 setTimeout(renderSwiper, 400);
+
+
+menuMobileIcon.addEventListener('click', () => {
+  menuMobile.style.display = 'flex';
+});
+
+menuMobileCloseIcon.addEventListener('click', () => {
+  menuMobile.style.display = 'none';
+});

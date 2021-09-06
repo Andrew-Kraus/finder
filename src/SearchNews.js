@@ -56,12 +56,20 @@ export default class SearchNews {
 
         for (let li of paginationLi) {
           li.addEventListener('click', () => {
+
             let pageNum = li.textContent;
             let start = (pageNum - 1) * articlesOfPage;
             let end = start + articlesOfPage;
+
+
+
+
+
             let articlesList = data.articles.slice(start, end);
+
             paginationLi.forEach((lastButton) => lastButton.classList.remove('active'));
             li.classList.add('active');
+
             resultsGrid.innerHTML = '';
             for (let article of articlesList) {
               resultsGrid.insertAdjacentHTML('beforeend',
@@ -72,7 +80,7 @@ export default class SearchNews {
                     </div>
                         <p class="results__date">${setDate(article.publishedAt)}</p>
                         <h2 class="results__title">${article.title}</h2>
-                        <p class="results__text">${article.description}</p>
+                        <p class="results__text">${(article.description).replaceAll(/<[^>]*>/g, '')}</p>
                         <div class="results__bottom">
                           <p class="results__source">${article.source.name}</p>
                         </div>

@@ -878,3 +878,94 @@ nav ul li a:hover {
     right: 10%;
   }
 }
+
+.biography {
+  padding-top: 400px;
+}
+
+.biography__me {
+  width: 500px;
+  height: 500px;
+}
+
+@media screen and (max-width: 900px) {
+  .biography__me {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .biography__me {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.biography__container {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width:1440px) {
+  .biography__container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .biography__container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .biography__container {
+    flex-direction: column;
+  }
+}
+
+.biography__title {
+  color: white;
+}
+
+.biography__subtitle {
+  color: white;
+}
+
+.biography__container-text {
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .biography__container-text {
+    margin-top: 20px;
+  }
+}
+
+.biography__icon {
+  width: 20px;
+  color: rgb(74, 74, 167);
+  margin-right: 20px;
+}
+
+.biography__icon:hover {
+  opacity: 0.5;
+}
+
+.biography__telegram {
+  color: white;
+  display: none;
+}
+
+.biography__icon-tg {
+  width: 40px;
+  color: rgb(74, 74, 167);
+  cursor: pointer;
+}
+
+.biography__icon-tg:hover {
+  opacity: 0.5;
+}

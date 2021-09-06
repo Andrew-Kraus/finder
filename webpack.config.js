@@ -12,6 +12,7 @@ entry: {
   news: './src/news.js',
   music: './src/music.js',
   weather: './src/weather.js',
+  contacts: './src/contacts.js',
 },
 output: {
     filename: '[name].[chunkhash].js',
@@ -101,6 +102,13 @@ plugins: [
       inject: true,
       chunks: ["weather"],
       favicon: './images/icon.ico'
+}),
+new HtmlWebpackPlugin({
+  template: 'src/contacts.html',
+  filename: 'contacts.html',
+  inject: true,
+  chunks: ["contacts"],
+  favicon: './images/icon.ico'
 }),
 
     new WebpackMd5Hash(),

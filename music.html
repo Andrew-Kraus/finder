@@ -1,4 +1,4 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Finder</title><link rel="icon" href="icon.ico"><link href="music.604c8a24189f6d178146.css" rel="stylesheet"></head><body onload="onPageLoad()"><div class="page"><header class="header"><img class="header__header-bg" src="images/header497ed8a6f2928eeb8493f535fbd1e46f.jpg"> <a href="#" class="header__logo">Finder</a><nav><ul><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="music.html">Музыка</a></li><li><a href="weather.html">Погода</a></li><li><a href="contacts.html">Контакты</a></li></ul></nav><img class="header__nav-icon-mobile" src="images/menuc3a4d004d9ab28d5a4c46b10301b1f5e.png"><div class="header__nav-mobile"><img class="header__nav-mobile-close" src="images/1243215a80294b785565d7546b2f10519d5c936.png"><div class="header__nav-mobile-container"><a class="header__nav-mobile-link" href="index.html">Главная</a> <a class="header__nav-mobile-link" href="news.html">Новости</a> <a class="header__nav-mobile-link" href="music.html">Музыка</a> <a class="header__nav-mobile-link" href="weather.html">Погода</a> <a class="header__nav-mobile-link" href="contacts.html">Контакты</a></div></div></header><section class="news music-padding"><div class="news__container"><h2 class="news__title">Искать</h2><div class="form news__form"><input name="search-news" class="news__input" placeholder="К примеру: Starset - Die For You" required> <input type="submit" name="" class="news__submit" value="Искать" onclick="fetchTracks()" required></div></div></section><section class="music"><div class="music__result"></div><div class="results__not-found-container"><img src="../images/not-found.png" class="results__not-found"><h2 class="results__not-found-text">К сожалению по вашему запросу ничего не найдено</h2></div></section><section class="recommendation"><h2 class="recommendation__title">Возможно вам понравится</h2><div class="recommendation__playlists"><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXaZvoHOvRg3p?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/7FqHuAvmREiIwVXVpZ9ooP?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/4iJ9B2uDKJzclQo7U9BqS8?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/75DTIyll3eRg99nyMMeqaA?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/6DdU5f52hpc2gfeLjK374Y?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/79fnwKynD56xIXBVWkyaE5?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div></section><input class="btn btn-primary btn-lg" type="button" onclick="requestAuthorization()" value="Авторизироваться"><br/><footer class="footer"><div class="footer__container"><h2 class="footer__title">Andrew Kraus</h2><p class="footer__subtitle">Junior Frontend Developer</p><ul class="footer__socials"><li><a href="https://vk.com/krausand"><i class="fab fa-vk footer__icon"></i></a></li><li><a href="https://vk.com/krausand"><i class="fab fa-telegram-plane footer__icon footer__icon-padding"></i></a></li><li><a href="https://github.com/Andrew-Kraus"><i class="fa fa-github footer__icon footer__icon-padding" aria-hidden="true"></i></a></li></ul></div></footer><div class="footer__bottom"><p class="footer__bottom-text">Copyright &copy;2021 Andrew Kraus. Designed by <span class="footer__design">Andrew Kraus</span>.</p></div></div><script src="https://kit.fontawesome.com/c6829fadb3.js" crossorigin="anonymous"></script><script src="https://sdk.scdn.co/spotify-player.js"></script><script>window.onSpotifyWebPlaybackSDKReady = () => {
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Finder</title><link rel="icon" href="icon.ico"><link href="music.604c8a24189f6d178146.css" rel="stylesheet"></head><body onload="onPageLoad()"><div class="page"><header class="header"><img class="header__header-bg" src="images/header497ed8a6f2928eeb8493f535fbd1e46f.jpg"> <a href="#" class="header__logo">Finder</a><nav><ul><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="music.html">Музыка</a></li><li><a href="weather.html">Погода</a></li><li><a href="contacts.html">Контакты</a></li></ul></nav><img class="header__nav-icon-mobile" src="images/menuc3a4d004d9ab28d5a4c46b10301b1f5e.png"><div class="header__nav-mobile"><img class="header__nav-mobile-close" src="images/1243215a80294b785565d7546b2f10519d5c936.png"><div class="header__nav-mobile-container"><a class="header__nav-mobile-link" href="index.html">Главная</a> <a class="header__nav-mobile-link" href="news.html">Новости</a> <a class="header__nav-mobile-link" href="music.html">Музыка</a> <a class="header__nav-mobile-link" href="weather.html">Погода</a> <a class="header__nav-mobile-link" href="contacts.html">Контакты</a></div></div></header><section class="news music-padding"><div class="news__container"><h2 class="news__title">Искать</h2><div class="form news__form"><input name="search-news" class="news__input" placeholder="К примеру: Starset - Die For You" required> <input type="submit" name="" class="news__submit" value="Искать" onclick="fetchTracks()" required></div></div></section><section class="music"><div class="music__result"></div><div class="results__not-found-container"><img src="../images/not-found.png" class="results__not-found"><h2 class="results__not-found-text">К сожалению по вашему запросу ничего не найдено</h2></div></section><section class="recommendation"><h2 class="recommendation__title">Возможно вам понравится</h2><div class="recommendation__playlists"><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXaZvoHOvRg3p?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/7FqHuAvmREiIwVXVpZ9ooP?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/4iJ9B2uDKJzclQo7U9BqS8?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/75DTIyll3eRg99nyMMeqaA?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/6DdU5f52hpc2gfeLjK374Y?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/79fnwKynD56xIXBVWkyaE5?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div></section><input class="btn btn-primary btn-lg" type="button" onclick="refreshAccessToken()" value="Авторизироваться"><br/><footer class="footer"><div class="footer__container"><h2 class="footer__title">Andrew Kraus</h2><p class="footer__subtitle">Junior Frontend Developer</p><ul class="footer__socials"><li><a href="https://vk.com/krausand"><i class="fab fa-vk footer__icon"></i></a></li><li><a href="https://vk.com/krausand"><i class="fab fa-telegram-plane footer__icon footer__icon-padding"></i></a></li><li><a href="https://github.com/Andrew-Kraus"><i class="fa fa-github footer__icon footer__icon-padding" aria-hidden="true"></i></a></li></ul></div></footer><div class="footer__bottom"><p class="footer__bottom-text">Copyright &copy;2021 Andrew Kraus. Designed by <span class="footer__design">Andrew Kraus</span>.</p></div></div><script src="https://kit.fontawesome.com/c6829fadb3.js" crossorigin="anonymous"></script><script src="https://sdk.scdn.co/spotify-player.js"></script><script>window.onSpotifyWebPlaybackSDKReady = () => {
           const token = localStorage.getItem("access_token");;
           const player = new Spotify.Player({
               name: 'Web Playback SDK Quick Start Player',
@@ -72,8 +72,6 @@ function onPageLoad(){
       else {
           // we have an access token so present device section
           refreshDevices();
-          refreshPlaylists();
-          currentlyPlaying();
       }
   }
 }
@@ -114,7 +112,7 @@ function fetchAccessToken( code ){
 }
 
 function refreshAccessToken(){
-  refresh_token = localStorage.getItem("refresh_token");
+  refresh_token = 'AQB6ZJvQPgvAcFPawiLHiJsLBZVDbtirKf9fpatcaDirQ547ZKt1QtGfRsnZtVMZecpnybslIzHWgJPnydlWfc6SjFLlEgkDua2pw_lG-TSiPDMZaVS73JZBwHujqCQDQ8M';
   let body = "grant_type=refresh_token";
   body += "&refresh_token=" + refresh_token;
   body += "&client_id=" + client_id;
@@ -165,12 +163,6 @@ function callApi(method, url, body, callback){
   xhr.onload = callback;
 }
 
-function refreshPlaylists(){
-  callApi( "GET", PLAYLISTS, null );
-}
-
-
-
 function play(){
   let playlist_id = PLAYLIST_ID;
   let trackindex = document.getElementById("tracks").value;
@@ -193,12 +185,6 @@ function pause(){
   callApi( "PUT", PAUSE + "?device_id=" + deviceId(), null, handleApiResponse );
 }
 
-function transfer(){
-  let body = {};
-  body.device_ids = [];
-  body.device_ids.push(deviceId())
-  callApi( "PUT", PLAYER, JSON.stringify(body), handleApiResponse );
-}
 
 function handleApiResponse(){
   if ( this.status == 200){
@@ -273,62 +259,4 @@ function checkForEmpty() {
   if (musicResults.value === undefined) {
     notFound.style.display = 'flex';
   }
-}
-
-function addTrack(item, index){
-  let node = document.createElement("option");
-  node.value = index;
-  node.innerHTML = item.track.name + " (" + item.track.artists[0].name + ")";
-  document.getElementById("tracks").appendChild(node);
-}
-
-function currentlyPlaying(){
-  callApi( "GET", PLAYER + "?market=US", null, handleCurrentlyPlayingResponse );
-}
-
-function handleCurrentlyPlayingResponse(){
-  if ( this.status == 200 ){
-      var data = JSON.parse(this.responseText);
-      console.log(data);
-      if ( data.item != null ){
-          document.getElementById("albumImage").src = data.item.album.images[0].url;
-          document.getElementById("trackTitle").innerHTML = data.item.name;
-          document.getElementById("trackArtist").innerHTML = data.item.artists[0].name;
-      }
-
-      if ( data.context != null ){
-          // select playlist
-          currentPlaylist = data.context.uri;
-          currentPlaylist = currentPlaylist.substring( currentPlaylist.lastIndexOf(":") + 1,  currentPlaylist.length );
-      }
-  }
-  else if ( this.status == 204 ){
-
-  }
-  else if ( this.status == 401 ){
-      refreshAccessToken()
-  }
-  else {
-      console.log(this.responseText);
-      alert(this.responseText);
-  }
-}
-
-
-function onRadioButton( deviceId, playlistId ){
-  let body = {};
-  body.context_uri = "spotify:playlist:" + playlistId;
-  body.offset = {};
-  body.offset.position = 0;
-  body.offset.position_ms = 0;
-  callApi( "PUT", PLAY + "?device_id=" + deviceId, JSON.stringify(body), handleApiResponse );
-  //callApi( "PUT", SHUFFLE + "?state=true&device_id=" + deviceId, null, handleApiResponse );
-}
-
-function addRadioButton(item, index){
-  let node = document.createElement("button");
-  node.className = "btn btn-primary m-2";
-  node.innerText = index;
-  node.onclick = function() { onRadioButton( item.deviceId, item.playlistId ) };
-  document.getElementById("radioButtons").appendChild(node);
 }</script><script src="music.53b4590ca88204caa29b.js"></script></body></html>

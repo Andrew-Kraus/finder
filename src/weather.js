@@ -44,7 +44,7 @@ function renderSwiper() {
   }
 
 
-setTimeout(renderSwiper, 400);
+setTimeout(renderSwiper, 800);
 
 
 menuMobileIcon.addEventListener('click', () => {

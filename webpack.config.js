@@ -13,6 +13,7 @@ entry: {
   music: './src/music.js',
   weather: './src/weather.js',
   contacts: './src/contacts.js',
+  test: './src/test.js',
 },
 output: {
     filename: '[name].[chunkhash].js',
@@ -108,6 +109,13 @@ new HtmlWebpackPlugin({
   filename: 'contacts.html',
   inject: true,
   chunks: ["contacts"],
+  favicon: './images/icon.ico'
+}),
+new HtmlWebpackPlugin({
+  template: 'src/test.html',
+  filename: 'test.html',
+  inject: true,
+  chunks: ["test"],
   favicon: './images/icon.ico'
 }),
 

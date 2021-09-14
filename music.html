@@ -36,8 +36,8 @@
 
     var redirect_uri = "http://localhost:8080/music.html";
 
-    var client_id = "";
-var client_secret = ""; // In a real app you should not expose your client_secret to the user
+    var client_id = "717cad3f2d7f43529fbacd9d746b63db";
+var client_secret = "075e40d5a43a494f86291cad0e8501ca"; // In a real app you should not expose your client_secret to the user
 
 var access_token = null;
 var refresh_token = null;
@@ -61,8 +61,6 @@ const CURRENTLYPLAYING = "https://api.spotify.com/v1/me/player/currently-playing
 const SHUFFLE = "https://api.spotify.com/v1/me/player/shuffle";
 
 function onPageLoad(){
-  client_id = localStorage.getItem("client_id");
-  client_secret = localStorage.getItem("client_secret");
   if ( window.location.search.length > 0 ){
       handleRedirect();
   }
@@ -97,8 +95,6 @@ function getCode(){
 }
 
 function requestAuthorization(){
-  client_id = document.getElementById("clientId").value;
-  client_secret = document.getElementById("clientSecret").value;
   localStorage.setItem("client_id", client_id);
   localStorage.setItem("client_secret", client_secret); // In a real app you should not expose your client_secret to the user
 

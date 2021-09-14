@@ -972,9 +972,9 @@ nav ul li a:hover {
 
 
 .music__result {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -983,6 +983,19 @@ nav ul li a:hover {
 .iframe-settings {
   margin-bottom: 20px;
   border-radius: 20px;
+  width: 600px;
+}
+
+@media screen and (max-width: 650px) {
+  .iframe-settings {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .iframe-settings {
+    width: 320px;
+  }
 }
 
 .recommendation__playlists {
@@ -990,6 +1003,25 @@ nav ul li a:hover {
   grid-template-columns: repeat(3, 400px);
   grid-column-gap: 16px;
   grid-row-gap: 16px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1250px) {
+  .recommendation__playlists {
+    grid-template-columns: repeat(2, 400px);
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .recommendation__playlists {
+    grid-template-columns: repeat(1, 400px);
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .recommendation__playlists {
+    grid-template-columns: repeat(1, 320px);
+  }
 }
 
 .recommendation {
@@ -999,9 +1031,35 @@ nav ul li a:hover {
 .recommendation__title {
   color: white;
   font-size: 50px;
+  width: 1240px;
+  margin: 40px auto;
 }
 
-.recommendation__container {
-  margin: 0 auto;
-  width: 63%;
+@media screen and (max-width: 1250px) {
+  .recommendation__title {
+    width: 820px;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .recommendation__title {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .recommendation__title {
+    width: 320px;
+    font-size: 40px;
+  }
+}
+
+.music-padding {
+  padding-top: 300px;
+}
+
+@media screen and (max-width: 420px) {
+  .iframe-settings-playlist {
+    width: 320px;
+  }
 }

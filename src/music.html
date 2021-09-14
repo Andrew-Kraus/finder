@@ -36,7 +36,7 @@
     </div>
   </header>
 
-  <section class="news">
+  <section class="news music-padding">
     <div class="news__container">
       <h2 class="news__title">Искать</h2>
       <div class="form news__form">
@@ -57,16 +57,14 @@
 </section>
 
 <section class="recommendation">
-  <div class="recommendation__container">
   <h2 class="recommendation__title">Возможно вам понравится</h2>
   <div class="recommendation__playlists">
-      <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXaZvoHOvRg3p?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      <iframe src="https://open.spotify.com/embed/album/7FqHuAvmREiIwVXVpZ9ooP?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      <iframe src="https://open.spotify.com/embed/album/4iJ9B2uDKJzclQo7U9BqS8?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      <iframe src="https://open.spotify.com/embed/album/75DTIyll3eRg99nyMMeqaA?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      <iframe src="https://open.spotify.com/embed/album/6DdU5f52hpc2gfeLjK374Y?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      <iframe src="https://open.spotify.com/embed/album/79fnwKynD56xIXBVWkyaE5?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-  </div>
+      <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXaZvoHOvRg3p?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/7FqHuAvmREiIwVXVpZ9ooP?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/4iJ9B2uDKJzclQo7U9BqS8?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/75DTIyll3eRg99nyMMeqaA?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/6DdU5f52hpc2gfeLjK374Y?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/79fnwKynD56xIXBVWkyaE5?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 </div>
 </section>
 
@@ -127,7 +125,7 @@
       }
 
 
-    var redirect_uri = "https://andrew-kraus.github.io/finder/music.html";
+    var redirect_uri = "http://localhost:8080/music.html";
 
     var client_id = "";
 var client_secret = ""; // In a real app you should not expose your client_secret to the user
@@ -337,13 +335,13 @@ const inputTrack = document.querySelector('.news__input').value.toLowerCase();
         if (inputTrack === data.items[i].track.name.toLowerCase()) {
           musicResults.insertAdjacentHTML('beforeend',
         `
-        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="60%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="320px" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         `
       )
         } else if (inputTrack === data.items[i].track.artists[0].name.toLowerCase()) {
             musicResults.insertAdjacentHTML('beforeend',
         `
-        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="60%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="320px" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         `
           )
         } else if (inputTrack === data.items[i].track.artists[0].name.toLowerCase() + ' ' + data.items[i].track.name.toLowerCase() ||
@@ -352,7 +350,7 @@ const inputTrack = document.querySelector('.news__input').value.toLowerCase();
           inputTrack === data.items[i].track.name.toLowerCase() + ' - ' + data.items[i].track.artists[0].name.toLowerCase()) {
           musicResults.insertAdjacentHTML('beforeend',
         `
-        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="60%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="320px" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         `
           )
         }

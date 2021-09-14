@@ -1,1 +1,341 @@
-<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Finder</title><link rel="icon" href="icon.ico"><link href="music.24487ea2c2acdcd156ab.css" rel="stylesheet"></head><body><div class="page"><header class="header"><img class="header__header-bg" src="images/header497ed8a6f2928eeb8493f535fbd1e46f.jpg"> <a href="#" class="header__logo">Finder</a><nav><ul><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="music.html">Музыка</a></li><li><a href="weather.html">Погода</a></li><li><a href="#">Контакты</a></li></ul></nav><img class="header__nav-icon-mobile" src="images/menuc3a4d004d9ab28d5a4c46b10301b1f5e.png"><div class="header__nav-mobile"><img class="header__nav-mobile-close" src="images/1243215a80294b785565d7546b2f10519d5c936.png"><div class="header__nav-mobile-container"><a class="header__nav-mobile-link" href="index.html">Главная</a> <a class="header__nav-mobile-link" href="news.html">Новости</a> <a class="header__nav-mobile-link" href="music.html">Музыка</a> <a class="header__nav-mobile-link" href="weather.html">Погода</a> <a class="header__nav-mobile-link" href="#">Контакты</a></div></div></header><section class="news"><div class="news__container"><h2 class="news__title">Искать</h2><form class="form"><input name="search-news" class="news__input" placeholder="Введите имя исполнителя или трека" required> <input type="submit" name="" class="news__submit" value="Искать" required></form></div></section><footer class="footer"><div class="footer__container"><h2 class="footer__title">Andrew Kraus</h2><p class="footer__subtitle">Junior Frontend Developer</p><ul class="footer__socials"><li><a href="https://vk.com/krausand"><i class="fab fa-vk footer__icon"></i></a></li><li><a href="https://vk.com/krausand"><i class="fab fa-telegram-plane footer__icon footer__icon-padding"></i></a></li><li><a href="https://vk.com/krausand"><i class="fab fa-whatsapp footer__icon footer__icon-padding"></i></a></li><li><a href="https://vk.com/krausand"><i class="fab fa-youtube footer__icon footer__icon-padding"></i></a></li><li><a href="https://vk.com/krausand"><i class="fab fa-twitter footer__icon footer__icon-padding"></i></a></li></ul></div></footer><div class="footer__bottom"><p class="footer__bottom-text">Copyright &copy;2021 Andrew Kraus. Designed by <span class="footer__design">Andrew Kraus</span>.</p></div></div><script src="https://kit.fontawesome.com/c6829fadb3.js" crossorigin="anonymous"></script><script src="music.4d4bfff5f1229032f95d.js"></script></body></html>
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Finder</title><link rel="icon" href="icon.ico"><link href="music.56759719d75212f6d731.css" rel="stylesheet"></head><body onload="onPageLoad()"><div class="page"><header class="header"><img class="header__header-bg" src="images/header497ed8a6f2928eeb8493f535fbd1e46f.jpg"> <a href="#" class="header__logo">Finder</a><nav><ul><li><a href="index.html">Главная</a></li><li><a href="news.html">Новости</a></li><li><a href="music.html">Музыка</a></li><li><a href="weather.html">Погода</a></li><li><a href="contacts.html">Контакты</a></li></ul></nav><img class="header__nav-icon-mobile" src="images/menuc3a4d004d9ab28d5a4c46b10301b1f5e.png"><div class="header__nav-mobile"><img class="header__nav-mobile-close" src="images/1243215a80294b785565d7546b2f10519d5c936.png"><div class="header__nav-mobile-container"><a class="header__nav-mobile-link" href="index.html">Главная</a> <a class="header__nav-mobile-link" href="news.html">Новости</a> <a class="header__nav-mobile-link" href="music.html">Музыка</a> <a class="header__nav-mobile-link" href="weather.html">Погода</a> <a class="header__nav-mobile-link" href="contacts.html">Контакты</a></div></div></header><section class="news"><div class="news__container"><h2 class="news__title">Искать</h2><div class="form news__form"><input name="search-news" class="news__input" placeholder="К примеру: Starset - Die For You" required> <input type="submit" name="" class="news__submit" value="Искать" onclick="fetchTracks()" required></div></div></section><section class="music"><div class="music__result"></div><div class="results__not-found-container"><img src="../images/not-found.png" class="results__not-found"><h2 class="results__not-found-text">К сожалению по вашему запросу ничего не найдено</h2></div></section><section class="recommendation"><div class="recommendation__container"><h2 class="recommendation__title">Возможно вам понравится</h2><div class="recommendation__playlists"><iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXaZvoHOvRg3p?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe src="https://open.spotify.com/embed/album/7FqHuAvmREiIwVXVpZ9ooP?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe src="https://open.spotify.com/embed/album/4iJ9B2uDKJzclQo7U9BqS8?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe src="https://open.spotify.com/embed/album/75DTIyll3eRg99nyMMeqaA?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe src="https://open.spotify.com/embed/album/6DdU5f52hpc2gfeLjK374Y?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe><iframe src="https://open.spotify.com/embed/album/79fnwKynD56xIXBVWkyaE5?theme=0" width="400" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div></div></section><footer class="footer"><div class="footer__container"><h2 class="footer__title">Andrew Kraus</h2><p class="footer__subtitle">Junior Frontend Developer</p><ul class="footer__socials"><li><a href="https://vk.com/krausand"><i class="fab fa-vk footer__icon"></i></a></li><li><a href="https://vk.com/krausand"><i class="fab fa-telegram-plane footer__icon footer__icon-padding"></i></a></li><li><a href="https://github.com/Andrew-Kraus"><i class="fa fa-github footer__icon footer__icon-padding" aria-hidden="true"></i></a></li></ul></div></footer><div class="footer__bottom"><p class="footer__bottom-text">Copyright &copy;2021 Andrew Kraus. Designed by <span class="footer__design">Andrew Kraus</span>.</p></div></div><script src="https://kit.fontawesome.com/c6829fadb3.js" crossorigin="anonymous"></script><script src="https://sdk.scdn.co/spotify-player.js"></script><script>window.onSpotifyWebPlaybackSDKReady = () => {
+          const token = localStorage.getItem("access_token");;
+          const player = new Spotify.Player({
+              name: 'Web Playback SDK Quick Start Player',
+              getOAuthToken: cb => { cb(token); },
+              volume: 0.5
+          });
+
+          // Ready
+          player.addListener('ready', ({ device_id }) => {
+              localStorage.setItem("device_id", device_id);
+              console.log('Ready with Device ID', device_id);
+          });
+
+          // Not Ready
+          player.addListener('not_ready', ({ device_id }) => {
+              console.log('Device ID has gone offline', device_id);
+          });
+
+          player.addListener('initialization_error', ({ message }) => {
+              console.error(message);
+          });
+
+          player.addListener('authentication_error', ({ message }) => {
+              console.error(message);
+          });
+
+          player.addListener('account_error', ({ message }) => {
+              console.error(message);
+          });
+
+
+          player.connect();
+      }
+
+
+    var redirect_uri = "https://andrew-kraus.github.io/finder/music.html";
+
+    var client_id = "";
+var client_secret = ""; // In a real app you should not expose your client_secret to the user
+
+var access_token = null;
+var refresh_token = null;
+var currentPlaylist = "";
+var radioButtons = [];
+const musicResults = document.querySelector('.music__result');
+const notFound = document.querySelector('.results__not-found-container');
+
+const AUTHORIZE = "https://accounts.spotify.com/authorize"
+const TOKEN = "https://accounts.spotify.com/api/token";
+const PLAYLISTS = "https://api.spotify.com/v1/me/playlists";
+const PLAYLIST_ID ='2nbGdBSqvY8h9KCEekn2PA'
+const DEVICES = "https://api.spotify.com/v1/me/player/devices";
+const PLAY = "https://api.spotify.com/v1/me/player/play";
+const PAUSE = "https://api.spotify.com/v1/me/player/pause";
+const NEXT = "https://api.spotify.com/v1/me/player/next";
+const PREVIOUS = "https://api.spotify.com/v1/me/player/previous";
+const PLAYER = "https://api.spotify.com/v1/me/player";
+const TRACKS = "https://api.spotify.com/v1/playlists/2nbGdBSqvY8h9KCEekn2PA/tracks";
+const CURRENTLYPLAYING = "https://api.spotify.com/v1/me/player/currently-playing";
+const SHUFFLE = "https://api.spotify.com/v1/me/player/shuffle";
+
+function onPageLoad(){
+  client_id = localStorage.getItem("client_id");
+  client_secret = localStorage.getItem("client_secret");
+  if ( window.location.search.length > 0 ){
+      handleRedirect();
+  }
+  else{
+      access_token = localStorage.getItem("access_token");
+      if ( access_token == null ){
+          // we don't have an access token so present token section
+      }
+      else {
+          // we have an access token so present device section
+          refreshDevices();
+          refreshPlaylists();
+          currentlyPlaying();
+      }
+  }
+}
+
+function handleRedirect(){
+  let code = getCode();
+  fetchAccessToken( code );
+  window.history.pushState("", "", redirect_uri); // remove param from url
+}
+
+function getCode(){
+  let code = null;
+  const queryString = window.location.search;
+  if ( queryString.length > 0 ){
+      const urlParams = new URLSearchParams(queryString);
+      code = urlParams.get('code')
+  }
+  return code;
+}
+
+function requestAuthorization(){
+  client_id = document.getElementById("clientId").value;
+  client_secret = document.getElementById("clientSecret").value;
+  localStorage.setItem("client_id", client_id);
+  localStorage.setItem("client_secret", client_secret); // In a real app you should not expose your client_secret to the user
+
+  let url = AUTHORIZE;
+  url += "?client_id=" + client_id;
+  url += "&response_type=code";
+  url += "&redirect_uri=" + encodeURI(redirect_uri);
+  url += "&show_dialog=true";
+  url += "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position user-library-read streaming user-read-playback-state user-read-recently-played playlist-read-private";
+  window.location.href = url; // Show Spotify's authorization screen
+}
+
+function fetchAccessToken( code ){
+  let body = "grant_type=authorization_code";
+  body += "&code=" + code;
+  body += "&redirect_uri=" + encodeURI(redirect_uri);
+  body += "&client_id=" + client_id;
+  body += "&client_secret=" + client_secret;
+  callAuthorizationApi(body);
+}
+
+function refreshAccessToken(){
+  refresh_token = localStorage.getItem("refresh_token");
+  let body = "grant_type=refresh_token";
+  body += "&refresh_token=" + refresh_token;
+  body += "&client_id=" + client_id;
+  callAuthorizationApi(body);
+}
+
+function callAuthorizationApi(body){
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", TOKEN, true);
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.setRequestHeader('Authorization', 'Basic ' + btoa(client_id + ":" + client_secret));
+  xhr.send(body);
+  xhr.onload = handleAuthorizationResponse;
+}
+
+function handleAuthorizationResponse(){
+  if ( this.status == 200 ){
+      var data = JSON.parse(this.responseText);
+      console.log(data);
+      var data = JSON.parse(this.responseText);
+      if ( data.access_token != undefined ){
+          access_token = data.access_token;
+          localStorage.setItem("access_token", access_token);
+      }
+      if ( data.refresh_token  != undefined ){
+          refresh_token = data.refresh_token;
+          localStorage.setItem("refresh_token", refresh_token);
+      }
+      onPageLoad();
+  }
+  else {
+      console.log(this.responseText);
+      alert(this.responseText);
+  }
+}
+
+function refreshDevices(){
+  callApi( "GET", DEVICES, null );
+}
+
+
+function callApi(method, url, body, callback){
+  let xhr = new XMLHttpRequest();
+  xhr.open(method, url, true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+  xhr.send(body);
+  xhr.onload = callback;
+}
+
+function refreshPlaylists(){
+  callApi( "GET", PLAYLISTS, null );
+}
+
+
+
+function play(){
+  let playlist_id = PLAYLIST_ID;
+  let trackindex = document.getElementById("tracks").value;
+  let album = document.getElementById("album").value;
+  let body = {};
+  if ( album.length > 0 ){
+      body.context_uri = album;
+  }
+  else{
+      body.context_uri = "spotify:playlist:" + playlist_id;
+  }
+  body.offset = {};
+  body.offset.position = trackindex.length > 0 ? Number(trackindex) : 0;
+  body.offset.position_ms = 0;
+  callApi( "PUT", PLAY + "?device_id=" + deviceId(), JSON.stringify(body), handleApiResponse );
+}
+
+
+function pause(){
+  callApi( "PUT", PAUSE + "?device_id=" + deviceId(), null, handleApiResponse );
+}
+
+function transfer(){
+  let body = {};
+  body.device_ids = [];
+  body.device_ids.push(deviceId())
+  callApi( "PUT", PLAYER, JSON.stringify(body), handleApiResponse );
+}
+
+function handleApiResponse(){
+  if ( this.status == 200){
+      console.log(this.responseText);
+      setTimeout(currentlyPlaying, 2000);
+  }
+  else if ( this.status == 204 ){
+      setTimeout(currentlyPlaying, 2000);
+  }
+  else if ( this.status == 401 ){
+      refreshAccessToken()
+  }
+  else {
+      console.log(this.responseText);
+      alert(this.responseText);
+  }
+}
+
+function deviceId(){
+  let device_id = localStorage.getItem('device_id');
+  return device_id;
+}
+
+function fetchTracks(){
+callApi( "GET", TRACKS, null, handleTracksResponse );
+}
+
+function handleTracksResponse(){
+musicResults.innerHTML = '';
+notFound.style.display = 'none';
+const inputTrack = document.querySelector('.news__input').value.toLowerCase();
+  if ( this.status == 200 ){
+      var data = JSON.parse(this.responseText);
+      console.log(data);
+      for (let i = 0; i < 101; i++) {
+        if (inputTrack === data.items[i].track.name.toLowerCase()) {
+          musicResults.insertAdjacentHTML('beforeend',
+        `
+        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="60%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        `
+      )
+        } else if (inputTrack === data.items[i].track.artists[0].name.toLowerCase()) {
+            musicResults.insertAdjacentHTML('beforeend',
+        `
+        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="60%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        `
+          )
+        } else if (inputTrack === data.items[i].track.artists[0].name.toLowerCase() + ' ' + data.items[i].track.name.toLowerCase() ||
+          inputTrack === data.items[i].track.name.toLowerCase() + ' ' + data.items[i].track.artists[0].name.toLowerCase() ||
+          inputTrack === data.items[i].track.artists[0].name.toLowerCase() + ' - ' + data.items[i].track.name.toLowerCase() ||
+          inputTrack === data.items[i].track.name.toLowerCase() + ' - ' + data.items[i].track.artists[0].name.toLowerCase()) {
+          musicResults.insertAdjacentHTML('beforeend',
+        `
+        <iframe class="iframe-settings" src="https://open.spotify.com/embed/track/${data.items[i].track.id}?theme=0" width="60%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        `
+          )
+        }
+      }
+
+
+  }
+  else if ( this.status == 401 ){
+      refreshAccessToken();
+  }
+  else {
+      console.log(this.responseText);
+      alert(this.responseText);
+  }
+}
+
+function checkForEmpty() {
+  if (musicResults.value === undefined) {
+    notFound.style.display = 'flex';
+  }
+}
+
+function addTrack(item, index){
+  let node = document.createElement("option");
+  node.value = index;
+  node.innerHTML = item.track.name + " (" + item.track.artists[0].name + ")";
+  document.getElementById("tracks").appendChild(node);
+}
+
+function currentlyPlaying(){
+  callApi( "GET", PLAYER + "?market=US", null, handleCurrentlyPlayingResponse );
+}
+
+function handleCurrentlyPlayingResponse(){
+  if ( this.status == 200 ){
+      var data = JSON.parse(this.responseText);
+      console.log(data);
+      if ( data.item != null ){
+          document.getElementById("albumImage").src = data.item.album.images[0].url;
+          document.getElementById("trackTitle").innerHTML = data.item.name;
+          document.getElementById("trackArtist").innerHTML = data.item.artists[0].name;
+      }
+
+      if ( data.context != null ){
+          // select playlist
+          currentPlaylist = data.context.uri;
+          currentPlaylist = currentPlaylist.substring( currentPlaylist.lastIndexOf(":") + 1,  currentPlaylist.length );
+      }
+  }
+  else if ( this.status == 204 ){
+
+  }
+  else if ( this.status == 401 ){
+      refreshAccessToken()
+  }
+  else {
+      console.log(this.responseText);
+      alert(this.responseText);
+  }
+}
+
+
+function onRadioButton( deviceId, playlistId ){
+  let body = {};
+  body.context_uri = "spotify:playlist:" + playlistId;
+  body.offset = {};
+  body.offset.position = 0;
+  body.offset.position_ms = 0;
+  callApi( "PUT", PLAY + "?device_id=" + deviceId, JSON.stringify(body), handleApiResponse );
+  //callApi( "PUT", SHUFFLE + "?state=true&device_id=" + deviceId, null, handleApiResponse );
+}
+
+function addRadioButton(item, index){
+  let node = document.createElement("button");
+  node.className = "btn btn-primary m-2";
+  node.innerText = index;
+  node.onclick = function() { onRadioButton( item.deviceId, item.playlistId ) };
+  document.getElementById("radioButtons").appendChild(node);
+}</script><script src="music.53b4590ca88204caa29b.js"></script></body></html>

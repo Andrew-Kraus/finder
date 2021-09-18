@@ -2,6 +2,7 @@ import './index.css';
 import '../vendor/normalize.css';
 import MusicAuthApi from './MusicAuthApi';
 import MusicFetchTracks from './MusicFetchTracks';
+import { REFRESH_TOKEN } from '../pass';
 
 const header = document.querySelector('.header');
 
@@ -11,6 +12,7 @@ const refresh_token = 'AQB6ZJvQPgvAcFPawiLHiJsLBZVDbtirKf9fpatcaDirQ547ZKt1QtGfR
 
 const notFound = document.querySelector('.results__not-found-container');
 const musicSubmit = document.querySelector('.news__submit');
+console.log(REFRESH_TOKEN);
 
 const TOKEN = 'https://accounts.spotify.com/api/token';
 const TRACKS = 'https://api.spotify.com/v1/playlists/2nbGdBSqvY8h9KCEekn2PA/tracks';

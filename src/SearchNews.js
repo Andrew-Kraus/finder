@@ -52,7 +52,7 @@ export default class SearchNews {
             paginationLi.push(pagButton);
         }
         paginationLi[0].classList.add('active');
-        pagination.style.display = 'grid';
+        pagination.style.display = 'flex';
 
         for (let li of paginationLi) {
           li.addEventListener('click', () => {

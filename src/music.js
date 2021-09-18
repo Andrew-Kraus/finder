@@ -8,7 +8,6 @@ const header = document.querySelector('.header');
 
 const notFound = document.querySelector('.results__not-found-container');
 const musicSubmit = document.querySelector('.news__submit');
-console.log(REFRESH_TOKEN);
 
 const TOKEN = 'https://accounts.spotify.com/api/token';
 const TRACKS = 'https://api.spotify.com/v1/playlists/2nbGdBSqvY8h9KCEekn2PA/tracks';
@@ -24,6 +23,7 @@ window.addEventListener('load', () => {
   musicAuthApi.onPageLoad();
 });
 
-musicSubmit.addEventListener('click', () => {
+musicSubmit.addEventListener('click', (e) => {
+  e.preventDefault();
   musicFetchTracks.fetchTracks();
 });

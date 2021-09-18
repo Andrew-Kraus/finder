@@ -13,7 +13,6 @@ entry: {
   music: './src/music.js',
   weather: './src/weather.js',
   contacts: './src/contacts.js',
-  test: './src/test.js',
 },
 output: {
     filename: '[name].[chunkhash].js',
@@ -111,13 +110,7 @@ new HtmlWebpackPlugin({
   chunks: ["contacts"],
   favicon: './images/icon.ico'
 }),
-new HtmlWebpackPlugin({
-  template: 'src/test.html',
-  filename: 'test.html',
-  inject: true,
-  chunks: ["test"],
-  favicon: './images/icon.ico'
-}),
+
 
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

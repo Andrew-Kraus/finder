@@ -20,7 +20,7 @@ export default class SearchNews {
     this.preloader(true);
     this.newsApi.getNewsApi(newsInput.value)
     .then((data) => {
-      if (data.articles.length == 0) {
+      if (data.articles.length == 0 || newsInput.value === null) {
         this.notFound(true);
         }
         for (let i = 0; i < 9; i++) {

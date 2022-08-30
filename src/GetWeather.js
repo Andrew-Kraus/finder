@@ -38,9 +38,11 @@ export default class GetWeather {
       if (status === 'Clear') {
         return 'https://www.pinclipart.com/picdir/big/44-442469_cctv-camera-clipart.png';
       } else if (status === 'Clouds') {
-        return 'https://cdn.pixabay.com/photo/2020/03/06/02/02/cloud-4905880_1280.png';
+        return 'https://www.pinclipart.com/picdir/big/523-5239101_symbol-cloudy-weather-forecast-clipart.png';
       } else if (status === 'Rain') {
-        return 'https://image.flaticon.com/icons/svg/1146/1146858.svg';
+        return 'https://www.pinclipart.com/picdir/big/85-857176_rainy-weather-icon-rainy-icon-clipart.png';
+      } else {
+        return 'https://www.pinclipart.com/picdir/big/548-5482660_thunderstorm-clipart-png-download.png';
       }
     }
 
@@ -51,6 +53,8 @@ export default class GetWeather {
         return 'Облачно';
       } else if (status === 'Rain') {
         return 'Дождь';
+      } else {
+        return 'Гроза';
       }
     }
 

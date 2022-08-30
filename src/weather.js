@@ -54,3 +54,4 @@ menuMobileIcon.addEventListener('click', () => {
 menuMobileCloseIcon.addEventListener('click', () => {
   menuMobile.style.display = 'none';
 });
+

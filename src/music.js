@@ -15,6 +15,7 @@ const TRACKS = 'https://api.spotify.com/v1/playlists/2nbGdBSqvY8h9KCEekn2PA/trac
 const musicAuthApi = new MusicAuthApi(REFRESH_TOKEN, CLIENT_ID, CLIENT_SECRET, TOKEN);
 const musicFetchTracks = new MusicFetchTracks(TRACKS, musicAuthApi, notFound);
 
+
 window.addEventListener('scroll', () => {
   header.classList.toggle('sticky', window.scrollY > 0);
 });

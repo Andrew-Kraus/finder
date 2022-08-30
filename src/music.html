@@ -25,7 +25,7 @@
 
 
     <div class="header__nav-mobile">
-      <img class="header__nav-mobile-close" src="<%=require('../images/1243215.png')%>" alt="Изображение не загрузилось">
+      <img class="header__nav-mobile-close" src="<%=require('../images/close.png')%>" alt="Изображение не загрузилось">
       <div class="header__nav-mobile-container">
         <a class="header__nav-mobile-link" href="index.html">Главная</a>
         <a class="header__nav-mobile-link" href="news.html">Новости</a>
@@ -43,6 +43,7 @@
         <input type="text" name="search-news" class="news__input" placeholder="К примеру: Starset - Die For You" required>
         <input type="submit" name="" class="news__submit" value="Искать" required>
       </form>
+      <p class="news__error">"Spotify объявил, что уже 11 апреля перестанет работать на территории РФ. В компании отметили, что это временная мера, и позже она планирует вернуться на отечественный рынок. Сегодня Spotify отключил все свои сервисы в России." Приложение возообновит свою работу после того, как Spotify вернется в РФ.</p>
     </div>
   </section>
 
@@ -60,7 +61,7 @@
 <section class="recommendation">
   <h2 class="recommendation__title">Возможно вам понравится</h2>
   <div class="recommendation__playlists">
-      <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXaZvoHOvRg3p?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe class="iframe-settings-playlist" id="togglePlay" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXaZvoHOvRg3p?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/7FqHuAvmREiIwVXVpZ9ooP?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/4iJ9B2uDKJzclQo7U9BqS8?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       <iframe class="iframe-settings-playlist" src="https://open.spotify.com/embed/album/75DTIyll3eRg99nyMMeqaA?theme=0" width="400" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -85,7 +86,6 @@
   </div>
 
   <script src="https://kit.fontawesome.com/c6829fadb3.js" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

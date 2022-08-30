@@ -32,7 +32,7 @@ export default class SearchNews {
                 </div>
                     <p class="results__date">${setDate(data.articles[i].publishedAt)}</p>
                     <h2 class="results__title">${data.articles[i].title}</h2>
-                    <p class="results__text">${data.articles[i].description}</p>
+                    <p class="results__text">${(data.articles[i].description).replaceAll(/<[^>]*>/g, '').replaceAll(/<.*/g, '')}</p>
                     <div class="results__bottom">
                       <p class="results__source">${data.articles[i].source.name}</p>
                     </div>
@@ -76,7 +76,7 @@ export default class SearchNews {
                     </div>
                         <p class="results__date">${setDate(article.publishedAt)}</p>
                         <h2 class="results__title">${article.title}</h2>
-                        <p class="results__text">${(article.description).replaceAll(/<[^>]*>/g, '')}</p>
+                        <p class="results__text">${(article.description).replaceAll(/<[^>]*>/g, '').replaceAll(/<.*/g, '')}</p>
                         <div class="results__bottom">
                           <p class="results__source">${article.source.name}</p>
                         </div>
